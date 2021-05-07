@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        *{
+            font-family: Calibri, sans-serif;
+        }
+        .amount-box, .buttons-box, .result{
+         margin-top: 20px;   
+        }
+    </style>
+</head>
+<body>
+    <h1>Prosty kalkulator</h1>
+    <div class="amount-box">
+        <label for="a">
+            Podaj pierwszą liczbę:
+        </label>
+        <input type="number" step="" id="a">
+    </div>
+    <div class="amount-box"></div>
+    <label for="b">
+        Podaj drugą liczbę:
+    </label>
+    <input type="number" id="b">
+    </div>
+    <div class="buttons-box">
+        <input type="button" value="Dodawanie" onclick="addition();">
+        <input type="button" value="Odejmowanie" onclick="subtraction();">
+        <input type="button" value="Mnożenie" onclick="multiplication();">
+        <input type="button" value="Dzielenie" onclick="division();">
+
+    </div>
+
+    <div class="result">
+    
+    </div>
+
+    <script>
+      function addition(){
+        let a = document.getElementById('a').value;
+        let b = document.querySelector('#b').value;
+
+        if(a == '' || b == ''){
+            document.querySelector('.result').innerHTML = 'Proszę uzupełnić oba pola liczbami';
+        }else{
+            a = parseFloat(a);
+            b = parseFloat(b);
+            let result = a + b;
+    
+            document.querySelector('.result').innerHTML = 'Wynik to: '+result;
+
+        }
+      }
+
+      function subtraction(){
+        let a = document.getElementById('a').value; 
+        let b = document.querySelector('#b').value;
+
+        if(a == '' || b == ''){
+            document.querySelector('.result').innerHTML = 'Proszę uzupełnić oba pola liczbami';
+        }else{
+            a = parseFloat(a);
+            b = parseFloat(b);
+            let result = a - b;
+    
+            document.querySelector('.result').innerHTML = 'Wynik to: '+result;
+
+        }
+      }
+      function multiplication(){
+        let a = document.getElementById('a').value;
+        let b = document.querySelector('#b').value;
+
+        if(a == '' || b == ''){
+            document.querySelector('.result').innerHTML = 'Proszę uzupełnić oba pola liczbami';
+        }else{
+            a = parseFloat(a);
+            b = parseFloat(b);
+            let result = a * b;
+    
+            document.querySelector('.result').innerHTML = 'Wynik to: '+result;
+
+        }
+      }
+      function division(){
+        let a = document.getElementById('a').value;
+        let b = document.querySelector('#b').value;
+
+        if(a == '' || b == ''){
+            document.querySelector('.result').innerHTML = 'Proszę uzupełnić oba pola liczbami';
+        }else{
+            a = parseFloat(a);
+            b = parseFloat(b);
+            let result = a / b;
+    
+            document.querySelector('.result').innerHTML = 'Wynik to: '+result;
+
+        }
+      }
+
+    </script>
+</body>
+</html>
