@@ -14,7 +14,7 @@ This simple calculator was created while improving my practical skills in front-
 https://annlemottien.github.io/simple-calculator/
 
 ## Screenshots
-![screenshot](screenshot.jpg)
+![screenshot](kalkulator/screenshot.jpg)
 
 ## Technologies
 Project is created with:
